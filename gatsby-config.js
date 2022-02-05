@@ -2,12 +2,19 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
+
+// client.getSpace()
+// .then((space) => console.log(space))
+// .catch(console.error)
+
 const contentfulConfig = {
   spaceId: process.env.CONTENTFUL_SPACE_ID,
   accessToken:
     process.env.CONTENTFUL_ACCESS_TOKEN ||
     process.env.CONTENTFUL_DELIVERY_TOKEN,
 };
+
+
 
 // If you want to use the preview API please define
 // CONTENTFUL_HOST and CONTENTFUL_PREVIEW_ACCESS_TOKEN in your
@@ -36,8 +43,8 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Contentful Starter",
-    description: "Official Contentful Gatsby Starter",
+    title: "L\'Abri",
+    description: "Eliott's Blog",
   },
   pathPrefix: "/gatsby-contentful-starter",
   plugins: [

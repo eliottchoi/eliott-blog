@@ -7,25 +7,28 @@ import Layout from '../components/layout'
 import Hero from '../components/hero'
 import ArticlePreview from '../components/article-preview'
 
-class BlogIndex extends React.Component {
+class eluhouseIndex extends React.Component {
   render() {
     const posts = get(this, 'props.data.allContentfulBlogPost.nodes')
 
     return (
       <Layout location={this.props.location}>
-        <Seo title="Blog" />
-        <Hero title="Blog" />
+        <Seo title="Eluhouse" />
+        <Hero title="엘루하우스" />
         <ArticlePreview posts={posts} />
       </Layout>
     )
   }
 }
 
-export default BlogIndex
+export default eluhouseIndex
 
 export const pageQuery = graphql`
-  query BlogIndexQuery {
-    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
+  query EluHouseQuery {
+    allContentfulBlogPost(
+      sort: {fields: publishDate, order: DESC}
+      filter: {tags: {eq: "eluhouse"}}
+    ) {
       nodes {
         title
         slug
