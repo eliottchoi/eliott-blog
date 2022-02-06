@@ -49,6 +49,7 @@
     "setup": "node ./bin/setup.js",
     "netlify:login": "netlify login",
     "netlify:deploy": "netlify deploy -d public -p",
+    "predeploy": "npm run build && cp CNAME ./build",
     "deploy": "gatsby build && gh-pages -d public -b gh-pages"
   }
 }
