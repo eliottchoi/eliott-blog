@@ -6,7 +6,6 @@ import * as styles from './navigation.module.css'
 const Navigation = () => (
   <nav role="navigation" className={styles.container} aria-label="Main">
     <Link to="/" className={styles.logoLink}>
-      <span className={styles.logo} />
       <span className={styles.navigationItem}>L'Abri</span>
     </Link>
     <ul className={styles.navigation}>

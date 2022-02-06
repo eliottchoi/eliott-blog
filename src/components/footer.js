@@ -6,7 +6,7 @@ import * as styles from './footer.module.css'
 const Footer = () => (
   <Container as="footer">
     <div className={styles.container}>
-      Eliott
+      2022 | Eliott
     </div>
   </Container>
 )
